@@ -8,8 +8,8 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { doLogin } from "@/utils/api/auth";
 import Ajax from "@/utils/ajax";
-import store from "@/store/index";
 
 @Component({
   components: {
@@ -23,8 +23,12 @@ export default class HomeView extends Vue {
   }
 
   public test = async (): Promise<string> => {
-    let res = await Ajax.get("vue-test", {});
-    console.log(store.state);
+    let res = await doLogin({
+      account: "zugwui1",
+      password: "123123123",
+    });
+    let test = await Ajax.get("/vue-test");
+    console.log(res, test);
     return "test";
   };
 }
