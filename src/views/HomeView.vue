@@ -8,11 +8,24 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import Ajax from "@/utils/ajax";
+import store from "@/store/index";
 
 @Component({
   components: {
     HelloWorld,
   },
 })
-export default class HomeView extends Vue {}
+export default class HomeView extends Vue {
+  mounted() {
+    //  Ajax.get();
+    this.test();
+  }
+
+  public test = async (): Promise<string> => {
+    let res = await Ajax.get("vue-test", {});
+    console.log(store.state);
+    return "test";
+  };
+}
 </script>
