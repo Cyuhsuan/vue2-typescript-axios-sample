@@ -1,0 +1,43 @@
+.full-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-d-c {
+    display: flex;
+    flex-direction: column;
+}
+
+.f-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.f-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.f-align-bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+.f-j-sp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-j-c {
+    display: flex;
+    justify-content: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.margin-0 {
+    margin: 0;
+}
