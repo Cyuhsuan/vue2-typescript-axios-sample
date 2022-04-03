@@ -1,4 +1,5 @@
 # sleep-front-end
+vue2 + typescript + axios 基本封裝 實做demo
 
 ## Project setup
 ```
